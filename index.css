@@ -173,7 +173,6 @@ a {
 }
 
 .card-texto {
-    padding: 24px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -181,12 +180,17 @@ a {
 
 .card h3 {
     font-size: 36px;
-    margin-bottom: 12px;
+    padding: 24px 24px 12px 24px;
+}
+
+.card p {
+    padding-inline: 24px;
+    margin-bottom: 16px;
 }
 
 .card-info {
     margin-top: auto;
-    padding-top: 16px;
+    padding: 16px 24px 24px 24px;
     border-top: 2px solid var(--concreto-escuro);
     font-size: 15px;
     font-weight: 600;
@@ -196,14 +200,13 @@ a {
 }
 
 .passos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 24px;
-
 }
 
 .passo {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     border-top: 6px solid var(--tinta);
     padding-top: 20px;
 }
@@ -221,26 +224,20 @@ a {
     font-size: 36px;
     margin-bottom: 12px;
 }
-.passo h3{
-    font-size: 32px;
-    margin-block: 12px ;
-    margin-top: 8px;
-}
-.rodape{
-    margin-top: 120px;
-    background-color: var(--tinta);
-    color:var(--concreto);
+
+.rodape {
+    margin-top: 96px;
     padding-block: 56px;
+    background-color: var(--tinta);
+    color: var(--branco);
 }
-.rodape-colunas{
+
+.rodape-colunas {
     display: flex;
     gap: 40px;
 }
-.rodape-coluna{
-    flex: 1;
-}
-.rodape h4{
-    font: var(--fonte-cartaz);
-    color: var(--fita);
-    margin-right: 12px;
+
+.rodape-colunas > * {
+    flex: 1 1 0;
+    min-width: 0;
 }
