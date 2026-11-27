@@ -113,12 +113,12 @@ a {
 .botao {
     background-color: var(--tinta);
     color: var(--branco);
-    font-family: var(--fonte-texto);
-    font-size: 17px;
     font-weight: 700;
     text-decoration: none;
     padding: 16px 28px;
     border: none;
+    font-family: var(--fonte-texto);
+    font-size: 17px;
     cursor: pointer;
 }
 
@@ -149,10 +149,7 @@ a {
     flex-direction: column;
 }
 
-.card .foto,
-.card .foto-azul,
-.card .foto-amarela,
-.card .foto-tinta {
+.card .foto {
     height: 170px;
 }
 
@@ -173,6 +170,7 @@ a {
 }
 
 .card-texto {
+    padding: 24px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -180,33 +178,26 @@ a {
 
 .card h3 {
     font-size: 36px;
-    padding: 24px 24px 12px 24px;
-}
-
-.card p {
-    padding-inline: 24px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .card-info {
-    margin-top: auto;
-    padding: 16px 24px 24px 24px;
+    margin-top: 20px;
+    padding-top: 16px;
     border-top: 2px solid var(--concreto-escuro);
     font-size: 15px;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .passos {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
 }
 
 .passo {
-    flex: 1 1 0;
-    min-width: 0;
     border-top: 6px solid var(--tinta);
     padding-top: 20px;
 }
@@ -217,19 +208,18 @@ a {
     font-weight: 900;
     line-height: 1;
     color: var(--caixa-dagua);
-    margin-bottom: 16px;
 }
 
 .passo h3 {
-    font-size: 36px;
-    margin-bottom: 12px;
+    font-size: 32px;
+    margin-block: 8px 12px;
 }
 
 .rodape {
-    margin-top: 96px;
-    padding-block: 56px;
+    margin-top: 120px;
     background-color: var(--tinta);
-    color: var(--branco);
+    color: var(--concreto);
+    padding-block: 56px;
 }
 
 .rodape-colunas {
@@ -237,7 +227,26 @@ a {
     gap: 40px;
 }
 
-.rodape-colunas > * {
-    flex: 1 1 0;
-    min-width: 0;
+.rodape-coluna {
+    flex: 1;
+}
+
+.rodape h4 {
+    font-family: var(--fonte-cartaz);
+    font-size: 28px;
+    color: var(--fita);
+    margin-bottom: 12px;
+}
+
+
+@media (max-width: 800px) {
+    .cartazes,
+    .passos,
+    .rodape-colunas {
+        flex-direction: column;
+    }
+
+    .cartaz-principal h1 {
+        font-size: 84px;
+    }
 }
